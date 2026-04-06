@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL on CXY&#39;s Note 4.0</title>
+    <link>https://idea0816.github.io/tags/sql/</link>
+    <description>Recent content in SQL on CXY&#39;s Note 4.0</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Wed, 03 May 2023 19:00:00 +0000</lastBuildDate>
+    <atom:link href="https://idea0816.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Update] How to install MSSQL Server on Mac M2 using Docker</title>
+      <link>https://idea0816.github.io/2023/05/03/update-how-to-install-mssql-on-mac-m2/</link>
+      <pubDate>Wed, 03 May 2023 19:00:00 +0000</pubDate>
+      <guid>https://idea0816.github.io/2023/05/03/update-how-to-install-mssql-on-mac-m2/</guid>
+      <description>&lt;p&gt;近期將電腦升級為 Mac M2 ，&lt;a href=&#34;https://idea0816.github.io/2021/11/27/how-to-install-mssql-server-on-mac-using-docker/&#34; title=&#34;之前文章&#34;&gt;之前文章&lt;/a&gt;中所使用 2019 &amp;amp; 2017 的版本因為 ARM 架構而無法再繼續使用；經搜尋找到 &lt;a href=&#34;https://debugsolutions.wordpress.com/2021/03/17/using-sql-server-on-m1-based-mac-with-docker/&#34; title=&#34;Using SQL Server on M1 based Mac with Docker&#34;&gt;Using SQL Server on M1 based Mac with Docker&lt;/a&gt; 並實作成功、紀錄如下：&lt;/p&gt;&#xA;&lt;p&gt;一、Docker 已支援 ARM 、故可以直接由官網下載安裝(我使用 brew 的方式)。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Restore SQL Server on MAC Using DOCKER</title>
+      <link>https://idea0816.github.io/2022/03/07/how-to-restore-sql-server-on-mac-using-docker/</link>
+      <pubDate>Mon, 07 Mar 2022 19:00:00 +0000</pubDate>
+      <guid>https://idea0816.github.io/2022/03/07/how-to-restore-sql-server-on-mac-using-docker/</guid>
+      <description>&lt;p&gt;續前篇 &lt;a href=&#34;https://idea0816.github.io/2021/11/27/how-to-install-mssql-server-on-mac-using-docker/&#34; title=&#34;HOW TO INSTALL MSSQL SERVER ON MAC USING DOCKER&#34;&gt;HOW TO INSTALL MSSQL SERVER ON MAC USING DOCKER&lt;/a&gt; 在安裝完資料庫後；接下來當然就是先還原之前的資料庫、以利後續開發。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker cp 檔案名 容器名:/var/opt/mssql/backup&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/how-to-restore-sql-server-01.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The server selected protocol version TLS10 is not accepted</title>
+      <link>https://idea0816.github.io/2021/11/27/the-server-selected-protocol-version-tls10-is-not-accepted/</link>
+      <pubDate>Sat, 27 Nov 2021 19:00:00 +0000</pubDate>
+      <guid>https://idea0816.github.io/2021/11/27/the-server-selected-protocol-version-tls10-is-not-accepted/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;錯誤環境&lt;/strong&gt;：使用 OpenJDK 11 連線 SQL Server 2008 時，發生了找不到 openjdk 驅動程式無法使用安全通訊端層 (SSL) 加密建立與 SQL Server 的安全連接。&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;錯誤: &amp;ldquo;The server selected protocol version TLS10 is not accepted by client preferences [TLS13, TLS12]&amp;quot;。 ClientConnectionId:e98d4e86-b063-47d6-8bc7-7e0c482b146d 的結果。&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to install MSSQL Server on Mac using Docker</title>
+      <link>https://idea0816.github.io/2021/11/27/how-to-install-mssql-server-on-mac-using-docker/</link>
+      <pubDate>Sat, 27 Nov 2021 18:00:00 +0000</pubDate>
+      <guid>https://idea0816.github.io/2021/11/27/how-to-install-mssql-server-on-mac-using-docker/</guid>
+      <description>&lt;p&gt;因為開發的原因、所以需要在 Mac 上安裝 SQL Server 。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.docker.com&#34; title=&#34;Docker 官網&#34;&gt;Docker 官網&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;下載並安裝 Docker 。&lt;/p&gt;&#xA;&lt;p&gt;前往 Dockerhub 找到需要的 Image 檔案：&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://hub.docker.com/_/microsoft-mssql-server&#34; title=&#34;Dockerhub-SQL Server&#34;&gt;Dockerhub-SQL Server&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;目前在官網上只看到 2019 &amp;amp; 2017 的版本、所以我選擇了 2017 的版本。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;figure&gt;&#xA;    &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/how-to-install-mssql-server-on-mac-using-docker-01.jpg&#34; alt=&#34;DockerSQLserver&#34;&gt;&#xA;    &lt;center&gt;&lt;figcaption&gt;DockerSQLserver&lt;/figcaption&gt;&lt;/center&gt;&#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MAC 下 mysql 中文亂碼-找不到 my-default.cnf 和 my.cnf</title>
+      <link>https://idea0816.github.io/2018/04/23/mysql-chinese-character-garbling/</link>
+      <pubDate>Mon, 23 Apr 2018 18:00:00 +0000</pubDate>
+      <guid>https://idea0816.github.io/2018/04/23/mysql-chinese-character-garbling/</guid>
+      <description>&lt;p&gt;在 mac 下安裝好 mysql 後；以 MySQLWorkbench 進入 Server 並輸入以下命令：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;show&lt;/span&gt; variables &lt;span style=&#34;color:#ff79c6&#34;&gt;like&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;character_set_%&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一般來說、 MySQL 預設是拉丁文字集的、所以會如下圖所顯示的狀態：&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/mysql-chinese-character-garbling-02.jpg&#34; alt=&#34;mysql-chinese-character-garbling-02.jpg&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;在拜過 Google 大神後發現都是需要修改設定檔的、然而在路徑中 /usr/local/mysql/support-files 裡卻找不到 my-default.cnf 或 my.cnf 文件。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[SQL]截取字串</title>
+      <link>https://idea0816.github.io/2018/03/16/sql-substring-extraction/</link>
+      <pubDate>Fri, 16 Mar 2018 18:00:00 +0000</pubDate>
+      <guid>https://idea0816.github.io/2018/03/16/sql-substring-extraction/</guid>
+      <description>&lt;p&gt;今天討論系統時突然想到這個東西、所以做一個筆記囉。&lt;/p&gt;&#xA;&lt;p&gt;先放結果、再放說明：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;SUBSTRING&lt;/span&gt;(KHPO,&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;,CHARINDEX(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;&amp;lt;&amp;#39;&lt;/span&gt;,KHPO)&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#ff79c6&#34;&gt;FROM&lt;/span&gt; DDZL &lt;span style=&#34;color:#ff79c6&#34;&gt;WHERE&lt;/span&gt; XieXing &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;HE-1043&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上 SQL 碼由 2 個函數組成、分別說明如下：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CHARINDEX&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CHARINDEX(expressionToFind, expressionToSearch[, start_location])&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;expressionToFind 是要到 expressionToSearch 中尋找的字串，start_location 是 CHARINDEX 函數開始在 expressionToSearch 中找 expressionToFind 的位置。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>處理SQL Server 偵測到邏輯的一致性 I/O 錯誤:毀損頁</title>
+      <link>https://idea0816.github.io/2018/03/13/sql-server-detected-a-logical-consistency-io-error/</link>
+      <pubDate>Tue, 13 Mar 2018 18:00:00 +0000</pubDate>
+      <guid>https://idea0816.github.io/2018/03/13/sql-server-detected-a-logical-consistency-io-error/</guid>
+      <description>&lt;p&gt;今天在查詢資料庫時發生了如標題的錯誤，在拜過 Google 大神後特地筆記於下：&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1.檢查資料庫：DBCC CHECK(&amp;lsquo;DB&amp;rsquo;)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;2.切換單一使用者模式：ALTER DATABASE DbName SET SINGLE_USER&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;3.修復資料庫(可能遺失資料)：DBCC CHECKDB (DB, REPAIR_ALLOW_DATA_LOSS)&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

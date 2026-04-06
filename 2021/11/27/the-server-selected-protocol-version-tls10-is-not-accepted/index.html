@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="CXY&#39;s Note 4.0">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://idea0816.github.io//img/up_in_the_air.jpg">
+    <meta property="twitter:image" content="https://idea0816.github.io//img/up_in_the_air.jpg" />
+    
+
+    
+    <meta name="title" content="The server selected protocol version TLS10 is not accepted" />
+    <meta property="og:title" content="The server selected protocol version TLS10 is not accepted" />
+    <meta property="twitter:title" content="The server selected protocol version TLS10 is not accepted" />
+    
+
+    
+    <meta name="description" content="The server selected protocol version TLS10 is not accepted">
+    <meta property="og:description" content="The server selected protocol version TLS10 is not accepted" />
+    <meta property="twitter:description" content="The server selected protocol version TLS10 is not accepted" />
+    
+
+    <meta property="og:url" content="https://idea0816.github.io/2021/11/27/the-server-selected-protocol-version-tls10-is-not-accepted/" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>The server selected protocol version TLS10 is not accepted | 曉羽的平凡世界 | CXY&#39;s Note
+    </title>
+
+    <link rel="canonical" href="/2021/11/27/the-server-selected-protocol-version-tls10-is-not-accepted/">
+
+    
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.min.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHB9FCVMM2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZHB9FCVMM2');
+    </script>
+
+</head>
+
+
+
+
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">CXY&#39;s Note 4.0</a>
+            </div>
+
+            
+            
+            <div id="huxblog_navbar">
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/">All Posts</a>
+                        </li>
+                        
+                        
+                        
+
+                        
+                        <li><a href="/archive//">ARCHIVE</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+    </nav>
+    <script>
+        
+        
+        
+        var $body = document.body;
+        var $toggle = document.querySelector('.navbar-toggle');
+        var $navbar = document.querySelector('#huxblog_navbar');
+        var $collapse = document.querySelector('.navbar-collapse');
+
+        $toggle.addEventListener('click', handleMagic)
+        function handleMagic(e) {
+            if ($navbar.className.indexOf('in') > 0) {
+                
+                $navbar.className = " ";
+                
+                setTimeout(function () {
+                    
+                    if ($navbar.className.indexOf('in') < 0) {
+                        $collapse.style.height = "0px"
+                    }
+                }, 400)
+            } else {
+                
+                $collapse.style.height = "auto"
+                $navbar.className += " in";
+            }
+        }
+    </script>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/up_in_the_air.jpg')
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" href="/%20/tags/java" title="JAVA">
+                                JAVA
+                            </a>
+                            
+                            <a class="tag" href="/%20/tags/sql" title="SQL">
+                                SQL
+                            </a>
+                            
+                        </div>
+                        <h1>The server selected protocol version TLS10 is not accepted</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            曉羽
+                            
+                            on
+                            Saturday, November 27, 2021
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <p><strong>錯誤環境</strong>：使用 OpenJDK 11 連線 SQL Server 2008 時，發生了找不到 openjdk 驅動程式無法使用安全通訊端層 (SSL) 加密建立與 SQL Server 的安全連接。</p>
+<p><em>錯誤: &ldquo;The server selected protocol version TLS10 is not accepted by client preferences [TLS13, TLS12]&quot;。 ClientConnectionId:e98d4e86-b063-47d6-8bc7-7e0c482b146d 的結果。</em></p>
+<p><strong>發生原因</strong>：眾說紛云。 一、升級至 JAVA11 後、TLSv1 &amp; TLSv1.1 被預設 Disabled。 二、SQL Server 2008 要求加密連線、需更新。</p>
+<p><strong>解決方法</strong>： 在不動到 Server 的情況下，嘗試改寫連線方式及各種無腦測試後、以最簡單的方式解決了。</p>
+<p>在 java.security 這個設定檔中，找到 jdk.tls.disabledAlgorithms ，刪掉其中的 TLSv1 、即可連線成功。</p>
+<p>
+  <figure>
+    <img src="/img/oldblogimg/the-server-selected-protocol-version-tls10-is-not-accepted.jpg" alt="TLSv1">
+    <center><figcaption>TLSv1</figcaption></center>
+  </figure>
+
+</p>
+<ul>
+<li>在 Google 時發現，很多文章都會寫此檔案放在 %JAVAHOME%\JAVA\jreXXX\lib\security 中、一開始時一直沒找到；後來我反而是在 %JAVAHOME%\jdk-11.0.13.8-hotspot\Conf\Security 中找到的。有可能是因為版本的不同所以導致資料夾不同，有時候多注意一下，以免浪費了不必要的時間。</li>
+</ul>
+<p><strong>20230822 Tips：</strong> 在 Mac OS 中尋找 Java 安裝位置</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/usr/libexec/java_home -v
+</span></span></code></pre></div><p><strong>20240124 Tips：</strong> 最近試著升級成 jdk 17 &amp; SpringBoot 3.2.1 時、遇到了以下問題：</p>
+<p><em>&ldquo;encrypt&rdquo; 屬性設定為 &ldquo;true&rdquo; 且 &ldquo;trustServerCertificate&rdquo; 屬性設為 &ldquo;false&rdquo;，但驅動程式無法使用安全通訊端層 (SSL) 加密建立 SQL Server 的安全連線: 錯誤: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target。 ClientConnectionId:77468a01-4798-4f83-a45c-b1b4e5833e6b</em></p>
+<p>除了之前把 TLSv1 去除掉之外、需要在 application.properties 中再增加設定：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>spring.datasource.driver-class-name<span style="color:#ff79c6">=</span>com.microsoft.sqlserver.jdbc.SQLServerDriver
+</span></span><span style="display:flex;"><span>spring.datasource.url<span style="color:#ff79c6">=</span>jdbc:sqlserver://127.0.0.1:1433;<span style="color:#8be9fd;font-style:italic">databaseName</span><span style="color:#ff79c6">=</span>XXX_ERP;<span style="color:#8be9fd;font-style:italic">encrypt</span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">false</span>
+</span></span></code></pre></div><p>雖然是可以連絡了、但還是會出現以下警告訊息： TLSv1 was negotiated. Please update server and client to use TLSv1.2 at minimum.</p>
+<p>主要問題還是在於 SQL 2008 、就先撐著吧、看何時解決不了不得不升級囉！</p>
+
+
+                    
+
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/2021/11/27/how-to-install-mssql-server-on-mac-using-docker/" data-toggle="tooltip" data-placement="top"
+                                title="How to install MSSQL Server on Mac using Docker">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/2022/03/07/how-to-restore-sql-server-on-mac-using-docker/" data-toggle="tooltip" data-placement="top"
+                                title="How to Restore SQL Server on MAC Using DOCKER">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
+
+                    
+
+
+<div id="disqus-comment"></div>
+<div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cpysnote" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                </div>
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+                    </div>
+                </div>
+                
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                    
+                    
+                    <section>
+                        <hr class="hidden-sm hidden-xs">
+                        <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                        <div class="tags">
+                            
+                            
+                            
+                            
+                            
+                            <a href="/%20/tags/apple" title="apple">
+                                apple
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/docker" title="docker">
+                                docker
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/eclipse" title="eclipse">
+                                eclipse
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/git" title="git">
+                                git
+                            </a>
+                            
+                            
+                            
+                            
+                            
+                            <a href="/%20/tags/intellij" title="intellij">
+                                intellij
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/it" title="it">
+                                it
+                            </a>
+                            
+                            
+                            
+                            
+                            
+                            <a href="/%20/tags/java" title="java">
+                                java
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/jersey2" title="jersey2">
+                                jersey2
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/jquery" title="jquery">
+                                jquery
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/m2" title="m2">
+                                m2
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/maven" title="maven">
+                                maven
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/mis" title="mis">
+                                mis
+                            </a>
+                            
+                            
+                            
+                            
+                            
+                            <a href="/%20/tags/python" title="python">
+                                python
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/react" title="react">
+                                react
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/spring-boot" title="spring boot">
+                                spring boot
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/sql" title="sql">
+                                sql
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/struts-2-x" title="struts-2-x">
+                                struts-2-x
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/struts2" title="struts2">
+                                struts2
+                            </a>
+                            
+                            
+                            
+                            
+                        </div>
+                    </section>
+                    
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; CXY&#39;s Note 4.0 2026
+                    
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow" title="' + t + '">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

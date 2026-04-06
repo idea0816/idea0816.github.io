@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="CXY&#39;s Note 4.0">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://idea0816.github.io//img/up_in_the_air.jpg">
+    <meta property="twitter:image" content="https://idea0816.github.io//img/up_in_the_air.jpg" />
+    
+
+    
+    <meta name="title" content="How to Modify and Repackage a Java 8 JAR in a JDK 17 Environment" />
+    <meta property="og:title" content="How to Modify and Repackage a Java 8 JAR in a JDK 17 Environment" />
+    <meta property="twitter:title" content="How to Modify and Repackage a Java 8 JAR in a JDK 17 Environment" />
+    
+
+    
+    <meta name="description" content="How to Modify and Repackage a Java 8 JAR in a JDK 17 Environment">
+    <meta property="og:description" content="How to Modify and Repackage a Java 8 JAR in a JDK 17 Environment" />
+    <meta property="twitter:description" content="How to Modify and Repackage a Java 8 JAR in a JDK 17 Environment" />
+    
+
+    <meta property="og:url" content="https://idea0816.github.io/2026/01/08/modify-and-repackage-java8-in-jdk17/" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>How to Modify and Repackage a Java 8 JAR in a JDK 17 Environment | 曉羽的平凡世界 | CXY&#39;s Note
+    </title>
+
+    <link rel="canonical" href="/2026/01/08/modify-and-repackage-java8-in-jdk17/">
+
+    
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.min.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHB9FCVMM2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZHB9FCVMM2');
+    </script>
+
+</head>
+
+
+
+
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">CXY&#39;s Note 4.0</a>
+            </div>
+
+            
+            
+            <div id="huxblog_navbar">
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/">All Posts</a>
+                        </li>
+                        
+                        
+                        
+
+                        
+                        <li><a href="/archive//">ARCHIVE</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+    </nav>
+    <script>
+        
+        
+        
+        var $body = document.body;
+        var $toggle = document.querySelector('.navbar-toggle');
+        var $navbar = document.querySelector('#huxblog_navbar');
+        var $collapse = document.querySelector('.navbar-collapse');
+
+        $toggle.addEventListener('click', handleMagic)
+        function handleMagic(e) {
+            if ($navbar.className.indexOf('in') > 0) {
+                
+                $navbar.className = " ";
+                
+                setTimeout(function () {
+                    
+                    if ($navbar.className.indexOf('in') < 0) {
+                        $collapse.style.height = "0px"
+                    }
+                }, 400)
+            } else {
+                
+                $collapse.style.height = "auto"
+                $navbar.className += " in";
+            }
+        }
+    </script>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/up_in_the_air.jpg')
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" href="/%20/tags/java" title="JAVA">
+                                JAVA
+                            </a>
+                            
+                        </div>
+                        <h1>How to Modify and Repackage a Java 8 JAR in a JDK 17 Environment</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            曉羽
+                            
+                            on
+                            Thursday, January 8, 2026
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <p>在維護舊有的 Java 專案時，經常會遇到一個尷尬的情況：手邊只有最新的 JDK（如 JDK 17），但目標環境卻運行在 Java 8 上。最近我遇到需要修改一個名為 <code>rcmd.jar</code> 的舊檔案，並調整其中的 <code>com/vdnvn/SyncOrg.java</code> 邏輯 。</p>
+<p>紀錄了一下如何在不降級 JDK 的情況下，確保編譯出的檔案能相容於舊版環境。</p>
+<hr>
+<h2 id="準備工作">準備工作</h2>
+<p>在開始之前，先確保目錄結構符合 Java 的 Package 規範。以這次修改的 <code>SyncOrg.java</code> 為例，檔案結構應如下：</p>
+<p><strong>根目錄</strong>：放置 <code>rcmd.jar</code>。 <strong>原始碼路徑</strong>：<code>com/vdnvn/SyncOrg.java</code> 。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Project_Folder/
+</span></span><span style="display:flex;"><span>├── rcmd.jar                # 原始的 JAR 檔
+</span></span><span style="display:flex;"><span>└── com/vdnvn/SyncOrg.class    # 修改後的原始碼
+</span></span></code></pre></div><p><strong>1. 使用 JDK 17 編譯相容於 Java 8 的類別</strong> 這是最關鍵的一步。如果直接執行 javac，產生的 .class 檔版本會過高（Java 17 為 version 61），導致 Java 8 環境出現 UnsupportedClassVersionError。</p>
+<p>我們需要使用 &ndash;release 8 參數，這會同時檢查語法相容性與 API 可用性：</p>
+<p><strong>在根目錄執行，並將原本的 jar 加入 classpath 以便編譯</strong></p>
+<p><code>javac --release 8 -cp rcmd.jar com/vdnvn/SyncOrg.java</code></p>
+<ul>
+<li>
+<p>release 8：確保輸出的位元碼（Bytecode）版本為 52 (Java 8)。</p>
+</li>
+<li>
+<p>cp rcmd.jar：讓編譯器能找到該檔案引用的其他類別（例如同套件內的 AD.class 或 B64Encoder.class） 。</p>
+</li>
+</ul>
+<p><strong>2. 驗證位元碼版本 (Mac/Linux)</strong> 編譯完成後，在將 .class 壓回 JAR 之前，建議先確認版本是否正確。在 macOS 或 Linux (zsh) 環境下，可以使用以下指令：</p>
+<p><code>javap -v com/vdnvn/SyncOrg.class | grep major</code></p>
+<p>在 Windows 環境下，可以使用以下指令：</p>
+<p><code>javap -v com/vdnvn/SyncOrg.class | findstr major</code></p>
+<p>預期輸出：</p>
+<p><code>major version: 52</code></p>
+<p>這代表該檔案已成功編譯為 Java 8 格式。</p>
+<p><strong>3. 將修改後的檔案更新回 JAR</strong> 確認版本無誤後，我們使用 jar 指令的 u (update) 功能，將新的 .class 檔覆蓋掉 rcmd.jar 裡舊有的檔案 ：</p>
+<p><code>jar uf rcmd.jar com/vdnvn/SyncOrg.class</code></p>
+<p>這個指令會根據路徑 <code>com/vdnvn/SyncOrg.class</code> 自動尋找並替換 JAR 包內對應位置的檔案 。</p>
+<p><strong>注意事項總結</strong> - 語法限制：在修改代碼時，即便使用 JDK 17 開啟，也不能使用 Java 8 之後才有的語法（例如 var 或 Lambda 的新特性）。</p>
+<ul>
+<li>
+<p>路徑一致性：執行 jar uf 時，必須在 com 資料夾的上一層執行，否則 JAR 內的目錄結構會出錯。</p>
+</li>
+<li>
+<p>系統指令差異：在 Windows 上過濾字串請用 findstr，而 Mac/Linux 則使用 grep。</p>
+</li>
+</ul>
+<p>透過 &ndash;release 參數，我們可以很優雅地在現代開發環境中維護遺留系統（Legacy System）。希望這篇紀錄也能幫到正在處理舊版 JAR 檔的你！</p>
+
+
+                    
+
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/2024/06/05/react-https/" data-toggle="tooltip" data-placement="top"
+                                title="React 本地開發設置 https">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/2026/01/22/setup-nginx-on-windows/" data-toggle="tooltip" data-placement="top"
+                                title="Install and configure Nginx on Windows">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
+
+                    
+
+
+<div id="disqus-comment"></div>
+<div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cpysnote" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                </div>
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+                    </div>
+                </div>
+                
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                    
+                    
+                    <section>
+                        <hr class="hidden-sm hidden-xs">
+                        <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                        <div class="tags">
+                            
+                            
+                            
+                            
+                            
+                            <a href="/%20/tags/apple" title="apple">
+                                apple
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/docker" title="docker">
+                                docker
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/eclipse" title="eclipse">
+                                eclipse
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/git" title="git">
+                                git
+                            </a>
+                            
+                            
+                            
+                            
+                            
+                            <a href="/%20/tags/intellij" title="intellij">
+                                intellij
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/it" title="it">
+                                it
+                            </a>
+                            
+                            
+                            
+                            
+                            
+                            <a href="/%20/tags/java" title="java">
+                                java
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/jersey2" title="jersey2">
+                                jersey2
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/jquery" title="jquery">
+                                jquery
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/m2" title="m2">
+                                m2
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/maven" title="maven">
+                                maven
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/mis" title="mis">
+                                mis
+                            </a>
+                            
+                            
+                            
+                            
+                            
+                            <a href="/%20/tags/python" title="python">
+                                python
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/react" title="react">
+                                react
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/spring-boot" title="spring boot">
+                                spring boot
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/sql" title="sql">
+                                sql
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/struts-2-x" title="struts-2-x">
+                                struts-2-x
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/struts2" title="struts2">
+                                struts2
+                            </a>
+                            
+                            
+                            
+                            
+                        </div>
+                    </section>
+                    
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; CXY&#39;s Note 4.0 2026
+                    
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow" title="' + t + '">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

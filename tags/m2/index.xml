@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>M2 on CXY&#39;s Note 4.0</title>
+    <link>https://idea0816.github.io/tags/m2/</link>
+    <description>Recent content in M2 on CXY&#39;s Note 4.0</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Thu, 01 Feb 2024 19:00:00 +0000</lastBuildDate>
+    <atom:link href="https://idea0816.github.io/tags/m2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DNS Resolution Problem at start on Apple M2</title>
+      <link>https://idea0816.github.io/2024/02/01/dns-resolution-problem-at-start/</link>
+      <pubDate>Thu, 01 Feb 2024 19:00:00 +0000</pubDate>
+      <guid>https://idea0816.github.io/2024/02/01/dns-resolution-problem-at-start/</guid>
+      <description>&lt;p&gt;最近把 Spring Boot 升級到 3.2.1 後、莫名的遇到了以下的警告：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on &amp;#39;io.netty:netty-resolver-dns-native-macos&amp;#39;. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;經查：應該是因為在使用 M 晶片的 macOS 上缺了系統需要的 Library。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Docker]The requested image&#39;s platform (linux/arm64/v8) does not match the detected host platform (linux/amd64) and no specific platform was requested</title>
+      <link>https://idea0816.github.io/2023/06/26/requested-images-not-match/</link>
+      <pubDate>Mon, 26 Jun 2023 19:00:00 +0000</pubDate>
+      <guid>https://idea0816.github.io/2023/06/26/requested-images-not-match/</guid>
+      <description>&lt;p&gt;在新的 M2 pro 上依循著&lt;a href=&#34;https://idea0816.github.io/2022/11/12/run-springbootapp-in-a-docker/&#34; title=&#34;之前的方法&#34;&gt;之前的方法&lt;/a&gt;製作了 Docker Containter ，卻在 Synology NAS 上的 Docker 上要復原時發生了以下的錯誤訊息：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;The requested image&amp;#39;s platform &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;linux/arm64/v8&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; does not match the detected host platform &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;linux/amd64&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; and no specific platform was requested.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;經查詢後得知：在 M1/M2 中 build 出來的 Containter 是只能在它自己的環境中(linux/arm64/v8)執行；所以當導到其他的架構時、因為 amd64v8 和原本的 amd64 for x86 指令集不同時就會出現錯誤；雖然 Dcoker 構建出來的容器是可以在大多數操作系統上運作的、但⋯⋯需要特別注意的是：**Docker 容器的架構類型仍需和 Host 的操作系統相對應。**例：Ubuntu 是 x86 的、那麼 Docker 也必需是 x86 的。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[Update] How to install MSSQL Server on Mac M2 using Docker</title>
+      <link>https://idea0816.github.io/2023/05/03/update-how-to-install-mssql-on-mac-m2/</link>
+      <pubDate>Wed, 03 May 2023 19:00:00 +0000</pubDate>
+      <guid>https://idea0816.github.io/2023/05/03/update-how-to-install-mssql-on-mac-m2/</guid>
+      <description>&lt;p&gt;近期將電腦升級為 Mac M2 ，&lt;a href=&#34;https://idea0816.github.io/2021/11/27/how-to-install-mssql-server-on-mac-using-docker/&#34; title=&#34;之前文章&#34;&gt;之前文章&lt;/a&gt;中所使用 2019 &amp;amp; 2017 的版本因為 ARM 架構而無法再繼續使用；經搜尋找到 &lt;a href=&#34;https://debugsolutions.wordpress.com/2021/03/17/using-sql-server-on-m1-based-mac-with-docker/&#34; title=&#34;Using SQL Server on M1 based Mac with Docker&#34;&gt;Using SQL Server on M1 based Mac with Docker&lt;/a&gt; 並實作成功、紀錄如下：&lt;/p&gt;&#xA;&lt;p&gt;一、Docker 已支援 ARM 、故可以直接由官網下載安裝(我使用 brew 的方式)。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

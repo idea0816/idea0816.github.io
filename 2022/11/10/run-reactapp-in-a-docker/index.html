@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="CXY&#39;s Note 4.0">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://idea0816.github.io//img/up_in_the_air.jpg">
+    <meta property="twitter:image" content="https://idea0816.github.io//img/up_in_the_air.jpg" />
+    
+
+    
+    <meta name="title" content="How to Run ReactJs Application in a Docker Container" />
+    <meta property="og:title" content="How to Run ReactJs Application in a Docker Container" />
+    <meta property="twitter:title" content="How to Run ReactJs Application in a Docker Container" />
+    
+
+    
+    <meta name="description" content="How to Run ReactJs Application in a Docker Container">
+    <meta property="og:description" content="How to Run ReactJs Application in a Docker Container" />
+    <meta property="twitter:description" content="How to Run ReactJs Application in a Docker Container" />
+    
+
+    <meta property="og:url" content="https://idea0816.github.io/2022/11/10/run-reactapp-in-a-docker/" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>How to Run ReactJs Application in a Docker Container | 曉羽的平凡世界 | CXY&#39;s Note
+    </title>
+
+    <link rel="canonical" href="/2022/11/10/run-reactapp-in-a-docker/">
+
+    
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.min.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHB9FCVMM2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZHB9FCVMM2');
+    </script>
+
+</head>
+
+
+
+
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        
+        <div class="container-fluid">
+            
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">CXY&#39;s Note 4.0</a>
+            </div>
+
+            
+            
+            <div id="huxblog_navbar">
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/">All Posts</a>
+                        </li>
+                        
+                        
+                        
+
+                        
+                        <li><a href="/archive//">ARCHIVE</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+    </nav>
+    <script>
+        
+        
+        
+        var $body = document.body;
+        var $toggle = document.querySelector('.navbar-toggle');
+        var $navbar = document.querySelector('#huxblog_navbar');
+        var $collapse = document.querySelector('.navbar-collapse');
+
+        $toggle.addEventListener('click', handleMagic)
+        function handleMagic(e) {
+            if ($navbar.className.indexOf('in') > 0) {
+                
+                $navbar.className = " ";
+                
+                setTimeout(function () {
+                    
+                    if ($navbar.className.indexOf('in') < 0) {
+                        $collapse.style.height = "0px"
+                    }
+                }, 400)
+            } else {
+                
+                $collapse.style.height = "auto"
+                $navbar.className += " in";
+            }
+        }
+    </script>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/up_in_the_air.jpg')
+    }
+</style>
+
+    <header class="intro-header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" href="/%20/tags/react" title="React">
+                                React
+                            </a>
+                            
+                            <a class="tag" href="/%20/tags/docker" title="docker">
+                                docker
+                            </a>
+                            
+                        </div>
+                        <h1>How to Run ReactJs Application in a Docker Container</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            
+                            Posted by
+                            
+                            曉羽
+                            
+                            on
+                            Thursday, November 10, 2022
+                            
+                            
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    
+    <article>
+        <div class="container">
+            <div class="row">
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                    
+                    <p>踩坑了許多、在查閱眾多文件後；以下為目前最終作法(非最佳)、希望之後可以再讓其更好。</p>
+<ul>
+<li>在項目的根目錄下新增 Dockerfile 。</li>
+</ul>
+<p>
+  <img src="/img/oldblogimg/run-reactapp-in-a-docker-01.jpg" alt="">
+
+</p>
+<ul>
+<li>原本寫法會使 image 暴增成近 1G 的檔案；經修改為以下的設定後目前僅有 27MB 左右。</li>
+</ul>
+<pre tabindex="0"><code># node 版本號(依開發時所使用的環境選擇為 18 、並加上 alpine 為穩定版)
+FROM node:18-alpine as builder
+# 建立工作目錄(小寫)
+WORKDIR /webbyerp
+# 添加所有檔案到工作目錄中
+ADD . /webbyerp
+# RUN npm install &amp;&amp; npm run build &amp;&amp; npm install -g http-server(用 ci 替代 npm install)
+RUN npm ci &amp;&amp; npm run build
+# PORT(這裡只是給發布的人知道自己原本的 PORT 接口)
+EXPOSE 3000
+# CMD http-server ./build -p 3000容器啟動後、執行http-server(用 nginx 取代)
+FROM nginx:alpine
+COPY --from=builder /webbyerp/build /usr/share/nginx/html
+</code></pre><ul>
+<li>建立完成後就來產出 image 檔(先上全圖)。</li>
+</ul>
+<p>
+  <img src="/img/oldblogimg/run-reactapp-in-a-docker-02.jpg" alt="">
+
+</p>
+<ul>
+<li>testimage 可替換成自己要的名字。<strong>特別注意此指令後面有一個「 . 」</strong>、沒加上會出錯。</li>
+</ul>
+<pre tabindex="0"><code>docker build -t testimage .
+</code></pre><ul>
+<li>「 -d -p 」或「 -dp 」是為了在後台運行新容器。另外在主機創立 3000 到 容器 3000 的端口映射。後來因為修改成使用 nginx 而非 http-server 、所以我直接改為 80:80 ；當然可以也可以 3000:80 避開主機的 port 80 。</li>
+</ul>
+<pre tabindex="0"><code>docker run -dp 3000:3000 testimage
+</code></pre><p>結論：</p>
+<ol>
+<li>使用 alpine 減少容量。</li>
+<li>鎖定 node 版本號：ex: node:18-alpine。</li>
+<li>npm ci 取代 npm Install 、避免版本問題及提高依賴安裝速度。</li>
+<li>package.json 單獨添加、充分利用鏡像緩存。</li>
+<li>只提取自己撰寫的文作、減小容量。</li>
+</ol>
+
+
+                    
+
+                    
+                    <hr>
+                    <ul class="pager">
+                        
+                        <li class="previous">
+                            <a href="/2022/09/08/use-antd-for-react/" data-toggle="tooltip" data-placement="top"
+                                title="use Antd for React">&larr;
+                                Previous Post</a>
+                        </li>
+                        
+                        
+                        <li class="next">
+                            <a href="/2022/11/12/run-springbootapp-in-a-docker/" data-toggle="tooltip" data-placement="top"
+                                title="How to Run Spring Boot Application in a Docker Container">Next
+                                Post &rarr;</a>
+                        </li>
+                        
+                    </ul>
+                    
+
+                    
+
+
+<div id="disqus-comment"></div>
+<div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cpysnote" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+                </div>
+
+                
+                
+                <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs">
+                        <h5>
+                            <a class="catalog-toggle" href="#">CATALOG</a>
+                        </h5>
+                        <ul class="catalog-body"></ul>
+                    </div>
+                </div>
+                
+
+                
+                <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                    
+                    
+                    <section>
+                        <hr class="hidden-sm hidden-xs">
+                        <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                        <div class="tags">
+                            
+                            
+                            
+                            
+                            
+                            <a href="/%20/tags/apple" title="apple">
+                                apple
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/docker" title="docker">
+                                docker
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/eclipse" title="eclipse">
+                                eclipse
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/git" title="git">
+                                git
+                            </a>
+                            
+                            
+                            
+                            
+                            
+                            <a href="/%20/tags/intellij" title="intellij">
+                                intellij
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/it" title="it">
+                                it
+                            </a>
+                            
+                            
+                            
+                            
+                            
+                            <a href="/%20/tags/java" title="java">
+                                java
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/jersey2" title="jersey2">
+                                jersey2
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/jquery" title="jquery">
+                                jquery
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/m2" title="m2">
+                                m2
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/maven" title="maven">
+                                maven
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/mis" title="mis">
+                                mis
+                            </a>
+                            
+                            
+                            
+                            
+                            
+                            <a href="/%20/tags/python" title="python">
+                                python
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/react" title="react">
+                                react
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/spring-boot" title="spring boot">
+                                spring boot
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/sql" title="sql">
+                                sql
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/struts-2-x" title="struts-2-x">
+                                struts-2-x
+                            </a>
+                            
+                            
+                            
+                            <a href="/%20/tags/struts2" title="struts2">
+                                struts2
+                            </a>
+                            
+                            
+                            
+                            
+                        </div>
+                    </section>
+                    
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; CXY&#39;s Note 4.0 2026
+                    
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow" title="' + t + '">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
