@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mis on CXY&#39;s Note 4.0</title>
-    <link>http://localhost:1313/tags/mis/</link>
+    <link>https://idea0816.github.io/tags/mis/</link>
     <description>Recent content in Mis on CXY&#39;s Note 4.0</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
     <lastBuildDate>Mon, 26 Mar 2018 18:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/mis/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://idea0816.github.io/tags/mis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NTP Server on Synology</title>
-      <link>http://localhost:1313/2018/03/26/ntp-server-on-synology/</link>
+      <link>https://idea0816.github.io/2018/03/26/ntp-server-on-synology/</link>
       <pubDate>Mon, 26 Mar 2018 18:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2018/03/26/ntp-server-on-synology/</guid>
+      <guid>https://idea0816.github.io/2018/03/26/ntp-server-on-synology/</guid>
       <description>&lt;p&gt;續上篇、在更新完無線基地台後；基地台時間是無法校正的，主要是因為發配的 IP 是僅供管理而無權限可以上網的。為了讓基地台的時間可以校正，想到還有 Synology NAS 可以利用，只是查了一下官網說明，可能因為版本的不同而有些許差異；所以再記錄一下囉。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Upgrade TP-Link TL-WR841n to DD-WRT</title>
-      <link>http://localhost:1313/2018/03/23/upgrade-tp-link-tl-wr841n-to-dd-wrt/</link>
+      <link>https://idea0816.github.io/2018/03/23/upgrade-tp-link-tl-wr841n-to-dd-wrt/</link>
       <pubDate>Fri, 23 Mar 2018 18:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2018/03/23/upgrade-tp-link-tl-wr841n-to-dd-wrt/</guid>
+      <guid>https://idea0816.github.io/2018/03/23/upgrade-tp-link-tl-wr841n-to-dd-wrt/</guid>
       <description>&lt;p&gt;公司使用的無線基地台是 TP-Link TL-WR841n V11.x ，初用時還算可以接受、但過了一年後的現在卻一直大小問題不斷；想試著更新韌體、然官網上的韌體卻雷打不動地一直維持在 TL-WR841N(TW)_V11_150616 這個版本。試著想刷 DD-WRT 卻一直找不到 V11.x 相符合的韌體；所以也就這樣放著一天拖過一天似老牛拖車勉強著用著。&lt;/p&gt;</description>
     </item>
   </channel>

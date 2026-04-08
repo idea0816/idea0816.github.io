@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Itunes on CXY&#39;s Note 4.0</title>
-    <link>http://localhost:1313/tags/itunes/</link>
+    <link>https://idea0816.github.io/tags/itunes/</link>
     <description>Recent content in Itunes on CXY&#39;s Note 4.0</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
     <lastBuildDate>Fri, 09 Mar 2018 18:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/itunes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://idea0816.github.io/tags/itunes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Set UP iTunes Genius</title>
-      <link>http://localhost:1313/2018/03/09/set-up-itunes-genius/</link>
+      <link>https://idea0816.github.io/2018/03/09/set-up-itunes-genius/</link>
       <pubDate>Fri, 09 Mar 2018 18:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2018/03/09/set-up-itunes-genius/</guid>
+      <guid>https://idea0816.github.io/2018/03/09/set-up-itunes-genius/</guid>
       <description>&lt;p&gt;之前總是自己建立播放清單，但歌曲資料庫太多、聽來聽去總是那幾首自己喜歡聽的歌，無形之中也錯失了深埋在資料庫中的好歌；所以就來研究一下讓他自動去找歌來給我聽囉！&lt;/p&gt;</description>
     </item>
   </channel>

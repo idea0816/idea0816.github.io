@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Intellij on CXY&#39;s Note 4.0</title>
-    <link>http://localhost:1313/tags/intellij/</link>
+    <link>https://idea0816.github.io/tags/intellij/</link>
     <description>Recent content in Intellij on CXY&#39;s Note 4.0</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
     <lastBuildDate>Thu, 01 Feb 2024 19:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/intellij/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://idea0816.github.io/tags/intellij/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DNS Resolution Problem at start on Apple M2</title>
-      <link>http://localhost:1313/2024/02/01/dns-resolution-problem-at-start/</link>
+      <link>https://idea0816.github.io/2024/02/01/dns-resolution-problem-at-start/</link>
       <pubDate>Thu, 01 Feb 2024 19:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2024/02/01/dns-resolution-problem-at-start/</guid>
+      <guid>https://idea0816.github.io/2024/02/01/dns-resolution-problem-at-start/</guid>
       <description>&lt;p&gt;最近把 Spring Boot 升級到 3.2.1 後、莫名的遇到了以下的警告：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on &amp;#39;io.netty:netty-resolver-dns-native-macos&amp;#39;. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;經查：應該是因為在使用 M 晶片的 macOS 上缺了系統需要的 Library。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Spring Boot 101 with GitHub</title>
-      <link>http://localhost:1313/2022/09/05/spring-boot-101-with-github/</link>
+      <link>https://idea0816.github.io/2022/09/05/spring-boot-101-with-github/</link>
       <pubDate>Mon, 05 Sep 2022 19:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2022/09/05/spring-boot-101-with-github/</guid>
-      <description>&lt;p&gt;配合 GitHub 創建一個 Spring Boot Project。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;先進入到 GitHub 的網頁。點擊 New 按扭去新增一個 Repository。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/img/oldblogimg/spring-boot-101-with-github-01.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;輸入名稱、並點擊下方按鈕創建。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/img/oldblogimg/spring-boot-101-with-github-02.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;如果沒有特別去設定 SSH key 的話、就必需得是 https開頭。將此網址複製。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/img/oldblogimg/spring-boot-101-with-github-03.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;</description>
+      <guid>https://idea0816.github.io/2022/09/05/spring-boot-101-with-github/</guid>
+      <description>&lt;p&gt;配合 GitHub 創建一個 Spring Boot Project。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;先進入到 GitHub 的網頁。點擊 New 按扭去新增一個 Repository。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/spring-boot-101-with-github-01.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;輸入名稱、並點擊下方按鈕創建。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/spring-boot-101-with-github-02.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;如果沒有特別去設定 SSH key 的話、就必需得是 https開頭。將此網址複製。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/spring-boot-101-with-github-03.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>IDEA solved &#34;Wrong tab&#34; Warning Message</title>
-      <link>http://localhost:1313/2022/04/20/idea-solved-wrong-tab-warning-message/</link>
+      <link>https://idea0816.github.io/2022/04/20/idea-solved-wrong-tab-warning-message/</link>
       <pubDate>Wed, 20 Apr 2022 19:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2022/04/20/idea-solved-wrong-tab-warning-message/</guid>
+      <guid>https://idea0816.github.io/2022/04/20/idea-solved-wrong-tab-warning-message/</guid>
       <description>&lt;p&gt;其實這個問題的根本就是：在 Java Doc 裡不存在這個標籤、所以只需在設定中新增標籤即可。&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;注意事項：需在 Default IDE 裡做設定、才不會下一次開新的 Project 時又出現錯誤。&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>

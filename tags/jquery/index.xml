@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JQuery on CXY&#39;s Note 4.0</title>
-    <link>http://localhost:1313/tags/jquery/</link>
+    <link>https://idea0816.github.io/tags/jquery/</link>
     <description>Recent content in JQuery on CXY&#39;s Note 4.0</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
     <lastBuildDate>Thu, 28 Apr 2022 19:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://idea0816.github.io/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>jQuery&#39;s GET, POST, PUT and DELETE example</title>
-      <link>http://localhost:1313/2022/04/28/jquerys-getpostput-and-delete-example/</link>
+      <link>https://idea0816.github.io/2022/04/28/jquerys-getpostput-and-delete-example/</link>
       <pubDate>Thu, 28 Apr 2022 19:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2022/04/28/jquerys-getpostput-and-delete-example/</guid>
+      <guid>https://idea0816.github.io/2022/04/28/jquerys-getpostput-and-delete-example/</guid>
       <description>&lt;p&gt;知道很多人不看說明、就想直接 copy 程式碼去測(我說我自己XD)；所以先上程式碼、廢話放在後面。&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;jQuery 版本：jquery-3.6.0.min.js&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to break from a each() function in JQuery?</title>
-      <link>http://localhost:1313/2018/03/27/how-to-break-from-a-each-function-in-jquery/</link>
+      <link>https://idea0816.github.io/2018/03/27/how-to-break-from-a-each-function-in-jquery/</link>
       <pubDate>Tue, 27 Mar 2018 18:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/2018/03/27/how-to-break-from-a-each-function-in-jquery/</guid>
+      <guid>https://idea0816.github.io/2018/03/27/how-to-break-from-a-each-function-in-jquery/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;筆記：&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$.each(data[&lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt;(key, value){&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (count &lt;span style=&#34;color:#ff79c6&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;parseInt&lt;/span&gt;(data[&lt;span style=&#34;color:#bd93f9&#34;&gt;3&lt;/span&gt;])){&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt;; &lt;span style=&#34;color:#6272a4&#34;&gt;// 等於continue&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }&lt;span style=&#34;color:#ff79c6&#34;&gt;else&lt;/span&gt;{&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;false&lt;/span&gt;; &lt;span style=&#34;color:#6272a4&#34;&gt;// 等於break&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>

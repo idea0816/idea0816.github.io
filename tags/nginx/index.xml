@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nginx on CXY&#39;s Note 4.0</title>
-    <link>http://localhost:1313/tags/nginx/</link>
+    <link>https://idea0816.github.io/tags/nginx/</link>
     <description>Recent content in Nginx on CXY&#39;s Note 4.0</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
     <lastBuildDate>Thu, 22 Jan 2026 17:20:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://idea0816.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install and configure Nginx on Windows</title>
-      <link>http://localhost:1313/2026/01/22/setup-nginx-on-windows/</link>
+      <link>https://idea0816.github.io/2026/01/22/setup-nginx-on-windows/</link>
       <pubDate>Thu, 22 Jan 2026 17:20:00 +0000</pubDate>
-      <guid>http://localhost:1313/2026/01/22/setup-nginx-on-windows/</guid>
+      <guid>https://idea0816.github.io/2026/01/22/setup-nginx-on-windows/</guid>
       <description>&lt;p&gt;突然有需求在 Windows 系統上發佈 React 的程式、所以研究了一下作法如下：&lt;/p&gt;&#xA;&lt;h5 id=&#34;安裝步驟&#34;&gt;安裝步驟：&lt;/h5&gt;&#xA;&lt;p&gt;&lt;strong&gt;下載 Nginx&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;先至官方頁面進行下載：&lt;a href=&#34;https://nginx.org/&#34; title=&#34;官方網頁&#34;&gt;官方網頁&lt;/a&gt;。 &lt;em&gt;我選擇 nginx 1.29.4&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;下載好的 Nginx 包，可以放到自己便於管理的目錄進行解壓，例如 D 盤，解壓後即可使用。&lt;/p&gt;</description>
     </item>
   </channel>
