@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apple on CXY&#39;s Note 4.0</title>
-    <link>https://idea0816.github.io/tags/apple/</link>
+    <link>http://localhost:1313/tags/apple/</link>
     <description>Recent content in Apple on CXY&#39;s Note 4.0</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
     <lastBuildDate>Mon, 07 Mar 2022 19:00:00 +0000</lastBuildDate>
-    <atom:link href="https://idea0816.github.io/tags/apple/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/apple/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Restore SQL Server on MAC Using DOCKER</title>
-      <link>https://idea0816.github.io/2022/03/07/how-to-restore-sql-server-on-mac-using-docker/</link>
+      <link>http://localhost:1313/2022/03/07/how-to-restore-sql-server-on-mac-using-docker/</link>
       <pubDate>Mon, 07 Mar 2022 19:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2022/03/07/how-to-restore-sql-server-on-mac-using-docker/</guid>
-      <description>&lt;p&gt;續前篇 &lt;a href=&#34;https://idea0816.github.io/2021/11/27/how-to-install-mssql-server-on-mac-using-docker/&#34; title=&#34;HOW TO INSTALL MSSQL SERVER ON MAC USING DOCKER&#34;&gt;HOW TO INSTALL MSSQL SERVER ON MAC USING DOCKER&lt;/a&gt; 在安裝完資料庫後；接下來當然就是先還原之前的資料庫、以利後續開發。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker cp 檔案名 容器名:/var/opt/mssql/backup&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/how-to-restore-sql-server-01.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/2022/03/07/how-to-restore-sql-server-on-mac-using-docker/</guid>
+      <description>&lt;p&gt;續前篇 &lt;a href=&#34;http://localhost:1313/2021/11/27/how-to-install-mssql-server-on-mac-using-docker/&#34; title=&#34;HOW TO INSTALL MSSQL SERVER ON MAC USING DOCKER&#34;&gt;HOW TO INSTALL MSSQL SERVER ON MAC USING DOCKER&lt;/a&gt; 在安裝完資料庫後；接下來當然就是先還原之前的資料庫、以利後續開發。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo docker cp 檔案名 容器名:/var/opt/mssql/backup&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/img/oldblogimg/how-to-restore-sql-server-01.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to install MSSQL Server on Mac using Docker</title>
-      <link>https://idea0816.github.io/2021/11/27/how-to-install-mssql-server-on-mac-using-docker/</link>
+      <link>http://localhost:1313/2021/11/27/how-to-install-mssql-server-on-mac-using-docker/</link>
       <pubDate>Sat, 27 Nov 2021 18:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2021/11/27/how-to-install-mssql-server-on-mac-using-docker/</guid>
-      <description>&lt;p&gt;因為開發的原因、所以需要在 Mac 上安裝 SQL Server 。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.docker.com&#34; title=&#34;Docker 官網&#34;&gt;Docker 官網&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;下載並安裝 Docker 。&lt;/p&gt;&#xA;&lt;p&gt;前往 Dockerhub 找到需要的 Image 檔案：&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://hub.docker.com/_/microsoft-mssql-server&#34; title=&#34;Dockerhub-SQL Server&#34;&gt;Dockerhub-SQL Server&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;目前在官網上只看到 2019 &amp;amp; 2017 的版本、所以我選擇了 2017 的版本。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;figure&gt;&#xA;    &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/how-to-install-mssql-server-on-mac-using-docker-01.jpg&#34; alt=&#34;DockerSQLserver&#34;&gt;&#xA;    &lt;center&gt;&lt;figcaption&gt;DockerSQLserver&lt;/figcaption&gt;&lt;/center&gt;&#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/2021/11/27/how-to-install-mssql-server-on-mac-using-docker/</guid>
+      <description>&lt;p&gt;因為開發的原因、所以需要在 Mac 上安裝 SQL Server 。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.docker.com&#34; title=&#34;Docker 官網&#34;&gt;Docker 官網&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;下載並安裝 Docker 。&lt;/p&gt;&#xA;&lt;p&gt;前往 Dockerhub 找到需要的 Image 檔案：&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://hub.docker.com/_/microsoft-mssql-server&#34; title=&#34;Dockerhub-SQL Server&#34;&gt;Dockerhub-SQL Server&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;目前在官網上只看到 2019 &amp;amp; 2017 的版本、所以我選擇了 2017 的版本。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;figure&gt;&#xA;    &lt;img src=&#34;http://localhost:1313/img/oldblogimg/how-to-install-mssql-server-on-mac-using-docker-01.jpg&#34; alt=&#34;DockerSQLserver&#34;&gt;&#xA;    &lt;center&gt;&lt;figcaption&gt;DockerSQLserver&lt;/figcaption&gt;&lt;/center&gt;&#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to install Node.js and npm on macOS with Homebrew</title>
-      <link>https://idea0816.github.io/2021/11/25/how-to-install-node-js-and-npm-on-macos-with-homebrew/</link>
+      <link>http://localhost:1313/2021/11/25/how-to-install-node-js-and-npm-on-macos-with-homebrew/</link>
       <pubDate>Thu, 25 Nov 2021 18:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2021/11/25/how-to-install-node-js-and-npm-on-macos-with-homebrew/</guid>
+      <guid>http://localhost:1313/2021/11/25/how-to-install-node-js-and-npm-on-macos-with-homebrew/</guid>
       <description>&lt;h4 id=&#34;先檢查在-mac-中是否有安裝了-homebrew&#34;&gt;先檢查在 Mac 中是否有安裝了 Homebrew。&lt;/h4&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew -v&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果沒有看到版本號、代表還沒安裝；先進到 &lt;a href=&#34;https://brew.sh/index_zh-tw&#34; title=&#34;Homebrew 官網&#34;&gt;Homebrew 官網&lt;/a&gt;、並在終端機中輸入以下內容：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/bin/bash -c &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;確認 Homebrew 安裝完成後、輸入以下：&lt;/p&gt;</description>
     </item>
     <item>
       <title>[iTunes] 0xc000007b 應用程式無法正確啟動</title>
-      <link>https://idea0816.github.io/2018/05/07/itunes-0xc000007b/</link>
+      <link>http://localhost:1313/2018/05/07/itunes-0xc000007b/</link>
       <pubDate>Mon, 07 May 2018 18:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2018/05/07/itunes-0xc000007b/</guid>
+      <guid>http://localhost:1313/2018/05/07/itunes-0xc000007b/</guid>
       <description>&lt;p&gt;因為同事的 iPhone 跟著他一起去游泳了，此時才發覺備份的重要性；所以來求助如何使用 Windows7 做 iTunes 的備份，在安裝後卻顯示如標題的錯誤；經拜過 Google 大神後解決掉問題，因是在同事的電腦上操作、故就不上圖了。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Evernote 轉移到 Mac 備忘錄</title>
-      <link>https://idea0816.github.io/2018/03/14/evernote-trans-mac-memo/</link>
+      <link>http://localhost:1313/2018/03/14/evernote-trans-mac-memo/</link>
       <pubDate>Wed, 14 Mar 2018 18:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2018/03/14/evernote-trans-mac-memo/</guid>
+      <guid>http://localhost:1313/2018/03/14/evernote-trans-mac-memo/</guid>
       <description>&lt;p&gt;Evernote / 印象筆記，從開始利用電腦做筆記後就一直使用這個筆記軟體；說實在好用、習慣也上手；但在 2016 年時官網突然宣佈&lt;a href=&#34;https://help.evernote.com/hc/en-us/articles/218558068&#34; title=&#34;免費版僅能同時登入 2 個裝置&#34;&gt;免費版僅能同時登入 2 個裝置&lt;/a&gt;；算了算手上除了公司用桌機、筆電、平板、手機最少就有 4 個裝置了，還未算入跨各種平台的裝置；一開始還是耐著性子在各裝置間登出登入的使用著，後來實在是受不了了；剛好蘋果的備忘錄更新了功能，加上慢慢的我也逐漸購入了蘋果的&amp;quot;全家餐&amp;quot;， Evernote 就越來越少登入。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Set UP iTunes Genius</title>
-      <link>https://idea0816.github.io/2018/03/09/set-up-itunes-genius/</link>
+      <link>http://localhost:1313/2018/03/09/set-up-itunes-genius/</link>
       <pubDate>Fri, 09 Mar 2018 18:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2018/03/09/set-up-itunes-genius/</guid>
+      <guid>http://localhost:1313/2018/03/09/set-up-itunes-genius/</guid>
       <description>&lt;p&gt;之前總是自己建立播放清單，但歌曲資料庫太多、聽來聽去總是那幾首自己喜歡聽的歌，無形之中也錯失了深埋在資料庫中的好歌；所以就來研究一下讓他自動去找歌來給我聽囉！&lt;/p&gt;</description>
     </item>
   </channel>

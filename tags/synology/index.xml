@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Synology on CXY&#39;s Note 4.0</title>
-    <link>https://idea0816.github.io/tags/synology/</link>
+    <link>http://localhost:1313/tags/synology/</link>
     <description>Recent content in Synology on CXY&#39;s Note 4.0</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
     <lastBuildDate>Mon, 26 Mar 2018 18:00:00 +0000</lastBuildDate>
-    <atom:link href="https://idea0816.github.io/tags/synology/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/synology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NTP Server on Synology</title>
-      <link>https://idea0816.github.io/2018/03/26/ntp-server-on-synology/</link>
+      <link>http://localhost:1313/2018/03/26/ntp-server-on-synology/</link>
       <pubDate>Mon, 26 Mar 2018 18:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2018/03/26/ntp-server-on-synology/</guid>
+      <guid>http://localhost:1313/2018/03/26/ntp-server-on-synology/</guid>
       <description>&lt;p&gt;續上篇、在更新完無線基地台後；基地台時間是無法校正的，主要是因為發配的 IP 是僅供管理而無權限可以上網的。為了讓基地台的時間可以校正，想到還有 Synology NAS 可以利用，只是查了一下官網說明，可能因為版本的不同而有些許差異；所以再記錄一下囉。&lt;/p&gt;</description>
     </item>
   </channel>

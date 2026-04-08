@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ai on CXY&#39;s Note 4.0</title>
-    <link>https://idea0816.github.io/tags/ai/</link>
+    <link>http://localhost:1313/tags/ai/</link>
     <description>Recent content in Ai on CXY&#39;s Note 4.0</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 06 Apr 2026 09:20:00 +0000</lastBuildDate>
-    <atom:link href="https://idea0816.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Apr 2026 09:20:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup n8n Server on Synology&#39;s Container Manager</title>
-      <link>https://idea0816.github.io/2026/04/06/setup-n8n-on-docker/</link>
-      <pubDate>Mon, 06 Apr 2026 09:20:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2026/04/06/setup-n8n-on-docker/</guid>
-      <description>&lt;h5 id=&#34;安裝步驟&#34;&gt;安裝步驟：&lt;/h5&gt;&#xA;&lt;p&gt;在 Synology 的 Container Manager 中搜尋 n8n。&lt;/p&gt;&#xA;&lt;p&gt;點選第一個：「n8nio/n8n」。&lt;/p&gt;&#xA;&lt;p&gt;下載&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/blogimg/n8n-on-docker-01.png&#34; alt=&#34;n8n-on-docker-01.png&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;下載完成後、點選映像檔、並選擇執行&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/blogimg/n8n-on-docker-02.png&#34; alt=&#34;n8n-on-docker-02.png&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;設定容器名稱&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/blogimg/n8n-on-docker-03.png&#34; alt=&#34;n8n-on-docker-03.png&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;設定環境變數&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;在這裡有一個特別需要注意的地方、我因為是要自己用且在內網中、所以沒有設定安全性登入；若是之後有需要的話需再設定。&lt;/strong&gt;&lt;/p&gt;</description>
+      <link>http://localhost:1313/2026/04/06/setup-n8n-on-docker/</link>
+      <pubDate>Mon, 06 Apr 2026 09:20:00 +0800</pubDate>
+      <guid>http://localhost:1313/2026/04/06/setup-n8n-on-docker/</guid>
+      <description>&lt;h5 id=&#34;安裝步驟&#34;&gt;安裝步驟：&lt;/h5&gt;&#xA;&lt;p&gt;在 Synology 的 Container Manager 中搜尋 n8n。&lt;/p&gt;&#xA;&lt;p&gt;點選第一個：「n8nio/n8n」。&lt;/p&gt;&#xA;&lt;p&gt;下載&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/img/blogimg/n8n-on-docker-01.png&#34; alt=&#34;n8n-on-docker-01.png&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;下載完成後、點選映像檔、並選擇執行&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/img/blogimg/n8n-on-docker-02.png&#34; alt=&#34;n8n-on-docker-02.png&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;設定容器名稱&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/img/blogimg/n8n-on-docker-03.png&#34; alt=&#34;n8n-on-docker-03.png&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;設定環境變數&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;在這裡有一個特別需要注意的地方、我因為是要自己用且在內網中、所以沒有設定安全性登入；若是之後有需要的話需再設定。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

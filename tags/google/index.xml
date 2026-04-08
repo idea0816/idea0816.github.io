@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google on CXY&#39;s Note 4.0</title>
-    <link>https://idea0816.github.io/tags/google/</link>
+    <link>http://localhost:1313/tags/google/</link>
     <description>Recent content in Google on CXY&#39;s Note 4.0</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
     <lastBuildDate>Thu, 15 Mar 2018 18:00:00 +0000</lastBuildDate>
-    <atom:link href="https://idea0816.github.io/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/google/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>繞過 Google Drive 檔案下載限制</title>
-      <link>https://idea0816.github.io/2018/03/15/bypassgoogledrivefiledownloadrestrictions/</link>
+      <link>http://localhost:1313/2018/03/15/bypassgoogledrivefiledownloadrestrictions/</link>
       <pubDate>Thu, 15 Mar 2018 18:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2018/03/15/bypassgoogledrivefiledownloadrestrictions/</guid>
+      <guid>http://localhost:1313/2018/03/15/bypassgoogledrivefiledownloadrestrictions/</guid>
       <description>&lt;p&gt;有在下載或分享一些&amp;quot;大檔案&amp;quot;的人，我想對於 Mega 或是 Google Drive 肯定是不陌生的吧？主要是下載速度快、分享方便、穩定等等的好處。雖然 Google Drive 速度快、又可以直接線上看影片，但有個很麻煩的點，就是流量限制；有時候下載或是太多人同時在線使用這個檔案時就會出現限制存取；查了一下、發現可以繞過這個限制如下：&lt;/p&gt;</description>
     </item>
   </channel>

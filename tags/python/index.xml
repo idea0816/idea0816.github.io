@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on CXY&#39;s Note 4.0</title>
-    <link>https://idea0816.github.io/tags/python/</link>
+    <link>http://localhost:1313/tags/python/</link>
     <description>Recent content in Python on CXY&#39;s Note 4.0</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
     <lastBuildDate>Fri, 04 May 2018 18:00:00 +0000</lastBuildDate>
-    <atom:link href="https://idea0816.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python 中單引號、雙引號的區別</title>
-      <link>https://idea0816.github.io/2018/05/04/differences-between-quotation-marks-in-python/</link>
+      <link>http://localhost:1313/2018/05/04/differences-between-quotation-marks-in-python/</link>
       <pubDate>Fri, 04 May 2018 18:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2018/05/04/differences-between-quotation-marks-in-python/</guid>
+      <guid>http://localhost:1313/2018/05/04/differences-between-quotation-marks-in-python/</guid>
       <description>&lt;p&gt;先提一下在 JAVA 中比較常用的是雙引號、稱為字串；而少用的單引號是出垷在 char 類型中的字元。&lt;/p&gt;&#xA;&lt;p&gt;ex：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; a &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String a &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ABCDEFG&amp;#34;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;因為寫久了 JAVA 、習慣了總是用雙引號來框住字串；所以在 Python 中就有點疑惑使用的時機點，特地去找了資料才發現原來還挺好用的。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Python 中的大括號{}、中括號[]、小括號()的區別</title>
-      <link>https://idea0816.github.io/2018/05/03/differences-between-brackets-in-python/</link>
+      <link>http://localhost:1313/2018/05/03/differences-between-brackets-in-python/</link>
       <pubDate>Thu, 03 May 2018 18:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2018/05/03/differences-between-brackets-in-python/</guid>
+      <guid>http://localhost:1313/2018/05/03/differences-between-brackets-in-python/</guid>
       <description>&lt;p&gt;Python 中所使用到的括號有三種(應該說每個程式吧?)，分別是：大括號{}、中括號[]、小括號()。其作用也不太相同，分別用來代表不同的數據類型。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;大括號{}： 代表 Dictionary 字典數據類型，字典是由鍵值一對對組合而成的。 &lt;strong&gt;用冒號「：」來分開鍵和值。逗號「，」來分開鍵值。&lt;/strong&gt; 鍵可以是數字、字串、甚至是位元組。字典中的鍵是唯一的，而值並不唯一。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;ex:&lt;/p&gt;</description>
     </item>
   </channel>

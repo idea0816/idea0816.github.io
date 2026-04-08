@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spring Boot on CXY&#39;s Note 4.0</title>
-    <link>https://idea0816.github.io/tags/spring-boot/</link>
+    <link>http://localhost:1313/tags/spring-boot/</link>
     <description>Recent content in Spring Boot on CXY&#39;s Note 4.0</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
     <lastBuildDate>Thu, 01 Feb 2024 19:00:00 +0000</lastBuildDate>
-    <atom:link href="https://idea0816.github.io/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DNS Resolution Problem at start on Apple M2</title>
-      <link>https://idea0816.github.io/2024/02/01/dns-resolution-problem-at-start/</link>
+      <link>http://localhost:1313/2024/02/01/dns-resolution-problem-at-start/</link>
       <pubDate>Thu, 01 Feb 2024 19:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2024/02/01/dns-resolution-problem-at-start/</guid>
+      <guid>http://localhost:1313/2024/02/01/dns-resolution-problem-at-start/</guid>
       <description>&lt;p&gt;最近把 Spring Boot 升級到 3.2.1 後、莫名的遇到了以下的警告：&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on &amp;#39;io.netty:netty-resolver-dns-native-macos&amp;#39;. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;經查：應該是因為在使用 M 晶片的 macOS 上缺了系統需要的 Library。&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Run Spring Boot Application in a Docker Container</title>
-      <link>https://idea0816.github.io/2022/11/12/run-springbootapp-in-a-docker/</link>
+      <link>http://localhost:1313/2022/11/12/run-springbootapp-in-a-docker/</link>
       <pubDate>Sat, 12 Nov 2022 19:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2022/11/12/run-springbootapp-in-a-docker/</guid>
-      <description>&lt;p&gt;首先如平時作法、將寫好的專案生成 jar 檔。&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Maven - Clean&#xA;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/run-springbootapp-in-a-docker-01.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Maven - Package&#xA;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/run-springbootapp-in-a-docker-02.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;之前的作法都是先在要運行的主機上安裝好 JRE 後、再執行以下的指令&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java &lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;jar webapierp&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;0.&lt;span style=&#34;color:#50fa7b&#34;&gt;1&lt;/span&gt;.&lt;span style=&#34;color:#50fa7b&#34;&gt;jar&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;現在要在 Docker 上直接運行。先新增 Dockerfile 內容如下(20221226更新)：&lt;/p&gt;</description>
+      <guid>http://localhost:1313/2022/11/12/run-springbootapp-in-a-docker/</guid>
+      <description>&lt;p&gt;首先如平時作法、將寫好的專案生成 jar 檔。&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Maven - Clean&#xA;&#xA;  &lt;img src=&#34;http://localhost:1313/img/oldblogimg/run-springbootapp-in-a-docker-01.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Maven - Package&#xA;&#xA;  &lt;img src=&#34;http://localhost:1313/img/oldblogimg/run-springbootapp-in-a-docker-02.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;之前的作法都是先在要運行的主機上安裝好 JRE 後、再執行以下的指令&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java &lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;jar webapierp&lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;0.&lt;span style=&#34;color:#50fa7b&#34;&gt;1&lt;/span&gt;.&lt;span style=&#34;color:#50fa7b&#34;&gt;jar&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;現在要在 Docker 上直接運行。先新增 Dockerfile 內容如下(20221226更新)：&lt;/p&gt;</description>
     </item>
     <item>
       <title>Spring Boot 101 with GitHub</title>
-      <link>https://idea0816.github.io/2022/09/05/spring-boot-101-with-github/</link>
+      <link>http://localhost:1313/2022/09/05/spring-boot-101-with-github/</link>
       <pubDate>Mon, 05 Sep 2022 19:00:00 +0000</pubDate>
-      <guid>https://idea0816.github.io/2022/09/05/spring-boot-101-with-github/</guid>
-      <description>&lt;p&gt;配合 GitHub 創建一個 Spring Boot Project。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;先進入到 GitHub 的網頁。點擊 New 按扭去新增一個 Repository。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/spring-boot-101-with-github-01.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;輸入名稱、並點擊下方按鈕創建。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/spring-boot-101-with-github-02.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;如果沒有特別去設定 SSH key 的話、就必需得是 https開頭。將此網址複製。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://idea0816.github.io/img/oldblogimg/spring-boot-101-with-github-03.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/2022/09/05/spring-boot-101-with-github/</guid>
+      <description>&lt;p&gt;配合 GitHub 創建一個 Spring Boot Project。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;先進入到 GitHub 的網頁。點擊 New 按扭去新增一個 Repository。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/img/oldblogimg/spring-boot-101-with-github-01.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;輸入名稱、並點擊下方按鈕創建。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/img/oldblogimg/spring-boot-101-with-github-02.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;如果沒有特別去設定 SSH key 的話、就必需得是 https開頭。將此網址複製。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/img/oldblogimg/spring-boot-101-with-github-03.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
